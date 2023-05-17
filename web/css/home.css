@@ -1,0 +1,10 @@
+#sidepanel
+{
+    background-image: url('../static/authbar.png');
+     height: 100vh;
+}
+
+#main
+{
+    background-image: url('../static/authback.png'); background-size: cover;
+}
