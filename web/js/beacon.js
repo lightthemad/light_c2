@@ -41,7 +41,7 @@ function delete_beacon(beacon_id)
 
 function command_beacon(beacon_id)
 {
-    var command = document.getElementById("command").value;
+    var command = document.getElementById(beacon_id).value;
     
     $.ajax({
 

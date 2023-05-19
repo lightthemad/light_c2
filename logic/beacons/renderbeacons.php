@@ -38,7 +38,7 @@ function renderbeacons($db)
         <td>$beacon[last_active]</td>";
         echo "
         <td>
-        <input id='command'>
+        <input id='$beacon[beacon_id]'>
         <button onclick='command_beacon(\"$beacon[beacon_id]\")' class='btn btn-primary' name ='exec'> Exec </button>
         </td>";
         echo "
