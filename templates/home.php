@@ -31,7 +31,7 @@ include_once root . "/logic/native/isinstalled.php";
 	    <div id="sidepanel" class="col-3">
             <div class="h-100 row align-items-center">
                 <div class="col" style="word-wrap: break-word;">
-                <h1 class="display-4 text-light text-center"> Simple; <kbd id="kdb" style="color:red">Secure;</kbd> Convinient;</h1>
+                <h1 class="display-4 text-light text-center"> Simple <kbd id="kdb" style="color:red">C2 Server</kbd> in three days!</h1>
                 </div>
             </div>
 		</div>
