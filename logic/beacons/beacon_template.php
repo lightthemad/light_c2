@@ -138,7 +138,7 @@ function beacon_create($id)
 
     // Compile the C# code
     shell_exec('/usr/bin/cli-csc ' . $csharpFile);
-    //shell_exec('/usr/bin/rm ' . $csharpFile);
+    shell_exec('/usr/bin/rm ' . $csharpFile);
 
 }
 
